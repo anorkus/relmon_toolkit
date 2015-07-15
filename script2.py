@@ -101,13 +101,13 @@ if __name__ == '__main__':
         proc.terminate()
         logFile.close()
         #os.system("echo 'Done.\nElapsed time:\n"+secondsToStr(time.time() - start_time)+"' | mail -s 'RelMon\n' 0041767098127@mail2sms.sunrise.ch")
-        os.system("echo 'Done.\nElapsed time:\n%s' | mail -s 'RelMon' 0041767098127@mail2sms.sunrise.ch" %(secondsToStr(time.time() - start_time)))
+        os.system("echo 'Done.\nElapsed time:\n%s' | mail -s 'RelMon' +41767098127@mail2sms.cern.ch" %(secondsToStr(time.time() - start_time)))
     except SystemExit:
-        os.system("echo 'Error' | mail -s 'RelMon' 0041767098127@mail2sms.sunrise.ch")
+        os.system("echo 'Error' | mail -s 'RelMon' +41767098127@mail2sms.cern.ch")
         sys.exit()
     except:
         proc.terminate()
         print "\n"
         print "Error in main script"
         print traceback.format_exc()
-        os.system("echo 'Error' | mail -s 'RelMon' 0041767098127@mail2sms.sunrise.ch")
+        os.system("echo 'Error' | mail -s 'RelMon' +41767098127@mail2sms.cern.ch")
